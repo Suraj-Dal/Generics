@@ -4,7 +4,7 @@ string[] arr2 = { "Apple", "Peach", "Banana", "Oragne", "Guava" };
 GenericProblems.Generic<int> maxInteger = new GenericProblems.Generic<int>(arr);
 GenericProblems.Generic<double> maxDouble = new GenericProblems.Generic<double>(arr1);
 GenericProblems.Generic<string> maxString = new GenericProblems.Generic<string>(arr2);
-Console.WriteLine("Max Integer from array is: " + maxInteger.showMax());
-Console.WriteLine("Max Double from array is: " + maxDouble.showMax());
-Console.WriteLine("Max String from array is: " + maxString.showMax());
+maxInteger.printMax();
+maxDouble.printMax();
+maxString.printMax();
 

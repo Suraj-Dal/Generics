@@ -28,5 +28,10 @@ namespace GenericProblems
             var Result = Generic<T>.findMaximum(this.value);
             return Result;
         }
+        public void printMax()
+        {
+            var max = findMaximum(this.value);
+            Console.WriteLine("Maximum value is: "+ max);
+        }
     }   
 }
