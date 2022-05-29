@@ -13,7 +13,7 @@ namespace TestMaximum
         {
             double a = 9.5, b = 8.2, c = 7.6;
             GenericProblems.Generic generic = new GenericProblems.Generic();
-            var Result = generic.findMaximumDouble(a, b, c);
+            var Result = generic.findMaximum(a, b, c);
             Assert.AreEqual(a, Result);
         }
         [Test]
@@ -21,7 +21,7 @@ namespace TestMaximum
         {
             double a = 8, b = 9, c = 7;
             GenericProblems.Generic generic = new GenericProblems.Generic();
-            var Result = generic.findMaximumDouble(a, b, c);
+            var Result = generic.findMaximum(a, b, c);
             Assert.AreEqual(b, Result);
         }
         [Test]
@@ -29,7 +29,7 @@ namespace TestMaximum
         {
             double a = 8, b = 9, c = 10;
             GenericProblems.Generic generic = new GenericProblems.Generic();
-            var Result = generic.findMaximumDouble(a, b, c);
+            var Result = generic.findMaximum(a, b, c);
             Assert.AreEqual(c, Result);
         }
     }

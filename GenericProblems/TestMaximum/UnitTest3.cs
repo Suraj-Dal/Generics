@@ -13,7 +13,7 @@ namespace TestMaximum
         {
             string a = "Peach", b = "Apple", c = "Banana";
             GenericProblems.Generic generic = new GenericProblems.Generic();
-            var Result = generic.findMaximumString(a, b, c);
+            var Result = generic.findMaximum(a, b, c);
             Assert.AreEqual(a, Result);
         }
         [Test]
@@ -21,7 +21,7 @@ namespace TestMaximum
         {
             string a = "Apple", b = "Peach", c = "Banana";
             GenericProblems.Generic generic = new GenericProblems.Generic();
-            var Result = generic.findMaximumString(a, b, c);
+            var Result = generic.findMaximum(a, b, c);
             Assert.AreEqual(b, Result);
         }
         [Test]
@@ -29,7 +29,7 @@ namespace TestMaximum
         {
             string a = "Banana", b = "Apple", c = "Peach";
             GenericProblems.Generic generic = new GenericProblems.Generic();
-            var Result = generic.findMaximumString(a, b, c);
+            var Result = generic.findMaximum(a, b, c);
             Assert.AreEqual(c, Result);
         }
     }

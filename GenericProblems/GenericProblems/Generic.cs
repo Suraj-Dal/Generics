@@ -8,7 +8,7 @@ namespace GenericProblems
 {
     public class Generic
     {
-        public int findMaximumInteger(int first, int second, int third)
+        public T findMaximum<T>(T first, T second, T third) where T : IComparable
         {
             if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0 ||
                 first.CompareTo(second) >= 0 && first.CompareTo(third) > 0 ||
@@ -25,39 +25,5 @@ namespace GenericProblems
             else
                 return third;
         }
-        public double findMaximumDouble(double first, double second, double third)
-        {
-            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0 ||
-                first.CompareTo(second) >= 0 && first.CompareTo(third) > 0 ||
-                first.CompareTo(second) > 0 && first.CompareTo(third) >= 0)
-            {
-                return first;
-            }
-            else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0 ||
-                second.CompareTo(first) >= 0 && second.CompareTo(third) > 0 ||
-                second.CompareTo(first) > 0 && second.CompareTo(third) >= 0)
-            {
-                return second;
-            }
-            else
-                return third;
-        }
-        public string findMaximumString(string first, string second, string third)
-        {
-            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0 ||
-                first.CompareTo(second) >= 0 && first.CompareTo(third) > 0 ||
-                first.CompareTo(second) > 0 && first.CompareTo(third) >= 0)
-            {
-                return first;
-            }
-            else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0 ||
-                second.CompareTo(first) >= 0 && second.CompareTo(third) > 0 ||
-                second.CompareTo(first) > 0 && second.CompareTo(third) >= 0)
-            {
-                return second;
-            }
-            else
-                return third;
-        }
-    }
+    }   
 }
