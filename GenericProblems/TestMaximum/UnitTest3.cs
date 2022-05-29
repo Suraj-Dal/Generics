@@ -11,26 +11,10 @@ namespace TestMaximum
         [Test]
         public void GivenMaxInFirstPosition_TestMaximum_ReturnMaxInFirstPosition()
         {
-            string a = "Peach", b = "Apple", c = "Banana";
-            GenericProblems.Generic<string> maxString = new GenericProblems.Generic<string>(a, b, c);
+            string[] arr = {"Apple", "Peach", "Banana", "Orange", "Guava"};
+            GenericProblems.Generic<string> maxString = new GenericProblems.Generic<string>(arr);
             var Result = maxString.showMax();
-            Assert.AreEqual(a, Result);
-        }
-        [Test]
-        public void GivenMaxInSecondPosition_TestMaximum_ReturnMaxInSecondPosition()
-        {
-            string a = "Apple", b = "Peach", c = "Banana";
-            GenericProblems.Generic<string> maxString = new GenericProblems.Generic<string>(a, b, c);
-            var Result = maxString.showMax();
-            Assert.AreEqual(b, Result);
-        }
-        [Test]
-        public void GivenMaxInThirdPosition_TestMaximum_ReturnMaxInThirdPosition()
-        {
-            string a = "Banana", b = "Apple", c = "Peach";
-            GenericProblems.Generic<string> maxString = new GenericProblems.Generic<string>(a, b, c);
-            var Result = maxString.showMax();
-            Assert.AreEqual(c, Result);
+            Assert.AreEqual(arr[4], Result);
         }
     }
 }

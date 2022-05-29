@@ -8,33 +8,24 @@ namespace GenericProblems
 {
     public class Generic<T> where T : IComparable
     {
-        public T first, second, third;
-        public Generic(T first, T second, T third)
+        public T[] value;
+        public Generic(T[] value)
         {
-            this.first = first;
-            this.second = second;
-            this.third = third; 
+            this.value = value; 
         }
-        public static T findMaximum(T first, T second, T third) 
+        public static T[] sort(T[] value)
         {
-            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0 ||
-                first.CompareTo(second) >= 0 && first.CompareTo(third) > 0 ||
-                first.CompareTo(second) > 0 && first.CompareTo(third) >= 0)
-            {
-                return first;
-            }
-            else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0 ||
-                second.CompareTo(first) >= 0 && second.CompareTo(third) > 0 ||
-                second.CompareTo(first) > 0 && second.CompareTo(third) >= 0)
-            {
-                return second;
-            }
-            else
-                return third;
+            Array.Sort(value);
+            return value;
+        }
+        public static T findMaximum(params T[] value ) 
+        {
+            var sorted_values = sort(value);
+            return sorted_values[value.Length - 1];
         }
         public T showMax()
         {
-            T Result = Generic<T>.findMaximum(this.first, this.second, this.third);
+            var Result = Generic<T>.findMaximum(this.value);
             return Result;
         }
     }   

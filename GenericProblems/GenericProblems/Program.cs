@@ -1,7 +1,10 @@
-﻿GenericProblems.Generic<int> maxInteger = new GenericProblems.Generic<int>(4, 8, 7);
-GenericProblems.Generic<double> maxDouble = new GenericProblems.Generic<double>(7.5, 8.2, 4.2);
-GenericProblems.Generic<string> maxString = new GenericProblems.Generic<string>("Apple", "Peach", "Banana");
-Console.WriteLine("Max Integer is: " + maxInteger.showMax());
-Console.WriteLine("Max Double is: " + maxDouble.showMax());
-Console.WriteLine("Max String is: " + maxString.showMax());
+﻿int[] arr = { 7, 6, 3, 8, 5 };  
+double[] arr1 = {5.2, 4.6, 7.4, 6.4, 8.4};
+string[] arr2 = { "Apple", "Peach", "Banana", "Oragne", "Guava" };
+GenericProblems.Generic<int> maxInteger = new GenericProblems.Generic<int>(arr);
+GenericProblems.Generic<double> maxDouble = new GenericProblems.Generic<double>(arr1);
+GenericProblems.Generic<string> maxString = new GenericProblems.Generic<string>(arr2);
+Console.WriteLine("Max Integer from array is: " + maxInteger.showMax());
+Console.WriteLine("Max Double from array is: " + maxDouble.showMax());
+Console.WriteLine("Max String from array is: " + maxString.showMax());
 
