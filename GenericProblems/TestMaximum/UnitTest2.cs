@@ -1,31 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace TestMaximum
 {
-    public class Tests
+    internal class UnitTest2
     {
         [Test]
         public void GivenMaxInFirstPosition_TestMaximum_ReturnMaxInFirstPosition()
         {
-            int a = 10, b = 8, c = 9;
+            double a = 9.5, b = 8.2, c = 7.6;
             GenericProblems.Generic generic = new GenericProblems.Generic();
-            var Result = generic.findMaximumInteger(a, b, c);
+            var Result = generic.findMaximumDouble(a, b, c);
             Assert.AreEqual(a, Result);
         }
         [Test]
         public void GivenMaxInSecondPosition_TestMaximum_ReturnMaxInSecondPosition()
         {
-            int a = 8, b = 9, c = 7;
+            double a = 8, b = 9, c = 7;
             GenericProblems.Generic generic = new GenericProblems.Generic();
-            var Result = generic.findMaximumInteger(a, b, c);
+            var Result = generic.findMaximumDouble(a, b, c);
             Assert.AreEqual(b, Result);
         }
         [Test]
         public void GivenMaxInThirdPosition_TestMaximum_ReturnMaxInThirdPosition()
         {
-            int a = 8, b = 9, c = 10;
+            double a = 8, b = 9, c = 10;
             GenericProblems.Generic generic = new GenericProblems.Generic();
-            var Result = generic.findMaximumInteger(a, b, c);
+            var Result = generic.findMaximumDouble(a, b, c);
             Assert.AreEqual(c, Result);
         }
-        
     }
 }
