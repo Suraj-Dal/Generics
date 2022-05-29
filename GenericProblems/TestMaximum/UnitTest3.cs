@@ -12,24 +12,24 @@ namespace TestMaximum
         public void GivenMaxInFirstPosition_TestMaximum_ReturnMaxInFirstPosition()
         {
             string a = "Peach", b = "Apple", c = "Banana";
-            GenericProblems.Generic generic = new GenericProblems.Generic();
-            var Result = generic.findMaximum(a, b, c);
+            GenericProblems.Generic<string> maxString = new GenericProblems.Generic<string>(a, b, c);
+            var Result = maxString.showMax();
             Assert.AreEqual(a, Result);
         }
         [Test]
         public void GivenMaxInSecondPosition_TestMaximum_ReturnMaxInSecondPosition()
         {
             string a = "Apple", b = "Peach", c = "Banana";
-            GenericProblems.Generic generic = new GenericProblems.Generic();
-            var Result = generic.findMaximum(a, b, c);
+            GenericProblems.Generic<string> maxString = new GenericProblems.Generic<string>(a, b, c);
+            var Result = maxString.showMax();
             Assert.AreEqual(b, Result);
         }
         [Test]
         public void GivenMaxInThirdPosition_TestMaximum_ReturnMaxInThirdPosition()
         {
             string a = "Banana", b = "Apple", c = "Peach";
-            GenericProblems.Generic generic = new GenericProblems.Generic();
-            var Result = generic.findMaximum(a, b, c);
+            GenericProblems.Generic<string> maxString = new GenericProblems.Generic<string>(a, b, c);
+            var Result = maxString.showMax();
             Assert.AreEqual(c, Result);
         }
     }

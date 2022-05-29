@@ -1,4 +1,7 @@
-﻿GenericProblems.Generic generic = new GenericProblems.Generic();
-Console.WriteLine("Maximum Integer is: "+ generic.findMaximum(8, 9, 7));
-Console.WriteLine("Maximum Float is: "+ generic.findMaximum(8.2, 7.4, 9.1));
-Console.WriteLine("Maximum string is :" + generic.findMaximum("Apple", "Peach", "Banana"));
+﻿GenericProblems.Generic<int> maxInteger = new GenericProblems.Generic<int>(4, 8, 7);
+GenericProblems.Generic<double> maxDouble = new GenericProblems.Generic<double>(7.5, 8.2, 4.2);
+GenericProblems.Generic<string> maxString = new GenericProblems.Generic<string>("Apple", "Peach", "Banana");
+Console.WriteLine("Max Integer is: " + maxInteger.showMax());
+Console.WriteLine("Max Double is: " + maxDouble.showMax());
+Console.WriteLine("Max String is: " + maxString.showMax());
+
